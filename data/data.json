@@ -1,0 +1,101 @@
+{
+    "destinations": [
+      {
+        "id": 1,
+        "name": "Paris, France",
+        "description": "The city of love and lights",
+        "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg",
+        "rating": 4.8,
+        "reviews": 1523,
+        "location": {
+          "latitude": 48.8566,
+          "longitude": 2.3522
+        }
+      },
+      {
+        "id": 2,
+        "name": "New York City, USA",
+        "description": "The Big Apple",
+        "image": "https://images.pexels.com/photos/944690/pexels-photo-944690.jpeg",
+        "rating": 4.7,
+        "reviews": 1987,
+        "location": {
+          "latitude": 40.7128,
+          "longitude": -74.0060
+        }
+      },
+      {
+        "id": 3,
+        "name": "Kyoto, Japan",
+        "description": "Historic temples and beautiful gardens",
+        "image": "https://images.pexels.com/photos/161164/senso-ji-kyoto-japan-temple-161164.jpeg",
+        "rating": 4.9,
+        "reviews": 1056,
+        "location": {
+          "latitude": 35.0116,
+          "longitude": 135.7681
+        }
+      },
+      {
+        "id": 4,
+        "name": "Cape Town, South Africa",
+        "description": "Stunning landscapes and wildlife",
+        "image": "https://images.pexels.com/photos/3770287/pexels-photo-3770287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "rating": 4.6,
+        "reviews": 1242,
+        "location": {
+          "latitude": -33.9249,
+          "longitude": 18.4241
+        }
+      },
+      {
+        "id": 5,
+        "name": "Rome, Italy",
+        "description": "Eternal city with ancient history",
+        "image": "https://img.freepik.com/free-photo/breathtaking-shot-colosseum-amphitheatre-located-rome-italy_181624-41196.jpg?w=996&t=st=1698176164~exp=1698176764~hmac=00536a21627d87ae743ba97ea5a8e21109adb5c12f0607325c66347e53d7daef",
+        "rating": 4.7,
+        "reviews": 1765,
+        "location": {
+          "latitude": 41.9028,
+          "longitude": 12.4964
+        }
+      },
+      {
+        "id": 6,
+        "name": "Bali, Indonesia",
+        "description": "Exotic beaches and lush landscapes",
+        "image": "https://img.freepik.com/free-photo/bali-pagoda-indonesia_1150-11021.jpg?w=996&t=st=1698176212~exp=1698176812~hmac=954ab49f1eca645c0b9670aa495539052e8e9ce8df8995a8391c46913b1da8ee",
+        "rating": 4.9,
+        "reviews": 1450,
+        "location": {
+          "latitude": -8.3405,
+          "longitude": 115.0920
+        }
+      },
+      {
+        "id": 7,
+        "name": "Sydney, Australia",
+        "description": "Iconic landmarks and vibrant culture",
+        "image": "https://img.freepik.com/free-photo/beautiful-shot-sydney-harbor-bridge-with-light-pink-blue-sky_181624-16041.jpg?w=996&t=st=1698176248~exp=1698176848~hmac=54df8cbfe4381d9e31d61069230a60a1504d7ecdd0742a7a15bb88989f499b58",
+        "rating": 4.8,
+        "reviews": 1892,
+        "location": {
+          "latitude": -33.8688,
+          "longitude": 151.2093
+        }
+      },
+      {
+        "id": 8,
+        "name": "Machu Picchu, Peru",
+        "description": "Ancient Inca citadel in the Andes",
+        "image": "https://img.freepik.com/free-photo/aerial-shot-beautiful-village-by-mountain-captured-machu-picchu-peru_181624-14674.jpg?w=996&t=st=1698176275~exp=1698176875~hmac=06ccc56e81ed66fa9b5d77b10d683d1be6d8ba22ec56ecd58a3ff7b362974d7f",
+        "rating": 4.9,
+        "reviews": 1098,
+        "location": {
+          "latitude": -13.1631,
+          "longitude": -72.5450
+        }
+      }
+    ]
+  }
+  
