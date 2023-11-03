@@ -1,28 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import data from '../data/data.json';
 import { PlacesModel } from '../model/PlacesModel';
 
 
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const Places = () => {
+
+const Places = ({navigation}: any) => {
+
+
 
   const [places, setPlaces] = useState<PlacesModel[]>([]);
 
-  console.log(data.destinations);
+//  console.log(data.destinations);
   
   useEffect( () => {
     setPlaces(data.destinations);
   }, []);
 
+  
+
   return (
-    <ScrollView>
-      <Text style={styles.heading}>Places</Text>
+    <View>
+      <Text style={styles.heading}>Trending Places..</Text>
+      <ScrollView>
+
       <View style = {styles.container}>
        
           {places.length > 0 ? (places.map((place) => (
-            <View key={place.id} style={styles.placeCard}>
+            <TouchableOpacity key={place.id} style={styles.placeCard}
+            onPress={() => navigation.navigate('Detail', {placeId: place.id})}
+            >
               <Image 
               source={
                 {uri : place.image}
@@ -34,14 +44,16 @@ const Places = () => {
               <Text style={styles.placeName}>{place.name}</Text>
               <Text style={styles.placeDescription}>{place.description}</Text>
               <Text style={styles.placeRating}>Rating: {place.rating}</Text>
-            </View>
+            </TouchableOpacity>
           ))): (
             <Text>Loading..</Text>
           )}
        
         
       </View>
-    </ScrollView>
+      </ScrollView>
+
+    </View>
   )
 }
 
