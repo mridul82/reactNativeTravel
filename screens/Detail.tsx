@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
-
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../App';
 
@@ -9,6 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 
+import { GestureHandlerRootView, TouchableOpacity } from 'react-native-gesture-handler';
 import data from '../data/data.json';
 
 
@@ -32,7 +32,8 @@ const Detail = ({route}:DetailProps) => {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>()
   return (
     
-      <View style={styles.container}>
+    
+      <GestureHandlerRootView style={styles.container}>
       {placeDetails ? (
         <>
           <Image source={{ uri: placeDetails.image }} style={styles.image} />
@@ -40,11 +41,22 @@ const Detail = ({route}:DetailProps) => {
           <Text style={styles.description}>{placeDetails.description}</Text>
           <Text style={styles.rating}>Rating: {placeDetails.rating}</Text>
           {/* Display other details */}
+          
         </>
       ) : (
         <Text>Loading...</Text>
       )}
-    </View>
+<View style={styles.buttonContaier}>
+<TouchableOpacity style={styles.bookButton} onPress={()=> navigation.navigate('Booking')}>
+        <Text style={styles.buttonText}>Book This Place</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.bookButton} onPress={()=> navigation.navigate('ViewBooking')}>
+        <Text style={styles.buttonText}>View Bookings</Text>
+      </TouchableOpacity>
+</View>
+
+    </GestureHandlerRootView>
       
   )
 }
@@ -58,8 +70,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   image: {
-    width: 400,
-    height: 400,
+    flex: 1,
+    width: 500,
+    height: 500,
+    resizeMode: 'cover',
+       
   },
   title: {
     fontSize: 24,
@@ -72,5 +87,23 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
+
+  bookButton: {
+    backgroundColor: '#0e8ae8',
+    padding: 10,
+    borderRadius: 8,
+    marginTop: 20,
+  },
+  buttonText: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 16,
+  },
+  buttonContaier : {    
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    height: 100,
+    width: 300
+  }
   // Add styles for other properties as needed
 });
